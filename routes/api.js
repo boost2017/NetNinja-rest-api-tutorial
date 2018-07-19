@@ -9,6 +9,11 @@ router.get('/ninjas', function(req, res){
 
 // add a new ninja to the db
 router.post('/ninjas', function(req, res){
+    // var ninja = new Ninja(req.body);
+    // ninja.save();
+    // res.send(ninja);
+    // Promise
+    // Need error handling.
     Ninja.create(req.body).then(function(ninja){
         res.send(ninja);
     });
